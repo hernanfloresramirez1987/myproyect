@@ -1,0 +1,16 @@
+<aside [ngClass]="incolorTheme() === 'green'
+        ? 'bg-gradient-to-r bg-blue-950'
+        : 'bg-gradient-to-r bg-slate-900'"
+      class="w-64 flex-shrink-0 hidden md:block text-white transition-all duration-500 shadow-xl overflow-y-auto p-2 h-full">
+  <div class="pb-4 pt-1 text-2xl font-semibold border-b" [ngClass]="incolorTheme() === 'green' ? 'border-sky-700' : 'border-pink-700'">
+    <a routerLink="/" class="hover:text-pink-500 transition rounded flex items-center">Inicio</a>
+  </div>
+  <nav class="mt-4 flex flex-col space-y-2">
+    <a routerLink="/my/aboutmy" class="hover:text-pink-500 transition p-3 rounded flex items-center space-x-2">Sobre mí</a>
+    <a routerLink="/my/myproyects" class="hover:text-pink-500 transition p-3 rounded flex items-center space-x-2">Proyectos</a>
+    <a routerLink="/my/myexperience" class="hover:text-pink-500 transition p-3 rounded flex items-center space-x-2">Experiencia</a>
+    <a routerLink="/my/myskills" class="hover:text-pink-500 transition p-3 rounded flex items-center space-x-2">Habilidades</a>
+    <a routerLink="/my/myeducation" class="hover:text-pink-500 transition p-3 rounded flex items-center space-x-2">Educación</a>
+    <a routerLink="/my/mycontacts" class="hover:text-pink-500 transition p-3 rounded flex items-center space-x-2">Contacto</a>
+  </nav>
+</aside>

@@ -1,0 +1,32 @@
+<div class="min-h-screen flex flex-col bg-gray-100">
+  <app-header [incolorTheme]="colorTheme()" [intoggleSidebar]="sidebarOpen()" (outcolorTheme)="toggleTheme($event)" (outbtnSidebar)="toggleSidebar($event)" />
+  <div class="flex flex-1 overflow-hidden">
+    @if (!sidebarOpen()) {
+      <app-sidebar [incolorTheme]="colorTheme()" [isSidebarOpen]="sidebarOpen()"/>
+    }
+    <div class="md:hidden flex flex-col w-full">
+      <!-- <app-breadcrums/> -->
+
+      @if (sidebarOpen()) {
+      <div class="bg-green-800 text-white p-4 space-y-2">
+        <a routerLink="/dashboard" class="block hover:bg-green-700 p-2 rounded">Dashboard</a>
+        <a routerLink="/productos" class="block hover:bg-green-700 p-2 rounded">Productos</a>
+        <a routerLink="/compras" class="block hover:bg-green-700 p-2 rounded">Compras</a>
+        <a routerLink="/ventas" class="block hover:bg-green-700 p-2 rounded">Ventas</a>
+        <a routerLink="/configuracion" class="block hover:bg-green-700 p-2 rounded">Configuración</a>
+      </div>
+    }
+      <main class="flex-1 p-4">
+        <!-- mobile -->
+        <app-breadcrums/>
+        <router-outlet/>
+      </main>
+    </div>
+    <main class="flex-1 overflow-y-auto p-4">
+      <!-- desktop -->
+       <app-breadcrums/>
+      <router-outlet/>
+    </main>
+  </div>
+  <app-footer/>
+</div>

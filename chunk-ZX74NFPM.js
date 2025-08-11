@@ -1,0 +1,1 @@
+import{Ua as p,Va as a,ab as f,ya as t}from"./chunk-GSKPEH5D.js";var e=class n{static \u0275fac=function(o){return new(o||n)};static \u0275cmp=t({type:n,selectors:[["app-nofound"]],decls:2,vars:0,template:function(o,s){o&1&&(p(0,"p"),f(1,"nofound works!"),a())},encapsulation:2})};export{e as default};
